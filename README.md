@@ -1,23 +1,17 @@
 # Lodu Royale
 
-Lodu Royale is now rebuilt as a **modern modular web game foundation** instead of a one-file static prototype.
+A modernized Ludo-inspired web prototype built to feel much closer to polished market games such as Ludo King, while still using a lightweight static front-end.
 
-## What's improved
+## Highlights
 
-- Multi-file architecture with separate UI composition, board rendering, constants, and game engine modules.
-- Centralized gameplay rules for dice rolls, movement, captures, home lanes, extra turns, and win state.
-- Cleaner structure for scaling toward animation systems, backend APIs, multiplayer rooms, and future game modes.
-- Premium dashboard layout inspired by current casual board-game UX expectations.
-
-## Project structure
-
-- `src/app.js` – application layout, UI sections, and event wiring.
-- `src/components/board.js` – reusable board renderer.
-- `src/game/constants.js` – board geometry and player constants.
-- `src/game/engine.js` – gameplay rules and state transitions.
-- `src/styles.css` – full visual system.
+- Premium glassmorphism dashboard and cinematic gradients.
+- Animated dice interactions with guided turn prompts.
+- Four-player playable board with bases, track movement, home lanes, captures, safe cells, and finish detection.
+- Mobile-friendly responsive layout with no build step required.
 
 ## Run locally
+
+Open `index.html` directly in a browser, or serve the folder statically:
 
 ```bash
 python3 -m http.server 8000

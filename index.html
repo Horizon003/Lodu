@@ -1,4 +1,5 @@
 <!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -19,5 +20,98 @@
   </head>
   <body>
     <div id="root"></div>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell"></div>
+    <main class="app-shell">
+      <section class="hero-panel glass-panel">
+        <div>
+          <p class="eyebrow">Modern market-ready refresh</p>
+          <h1>Lodu Royale</h1>
+          <p class="hero-copy">
+            A premium Ludo-inspired experience with richer visuals, animated dice,
+            live turn guidance, and a cleaner mobile-friendly board.
+          </p>
+        </div>
+
+        <div class="hero-actions">
+          <button id="newGameBtn" class="primary-btn">Start New Match</button>
+          <button id="rollDiceBtn" class="secondary-btn">Roll Dice</button>
+        </div>
+      </section>
+
+      <section class="dashboard-grid">
+        <aside class="glass-panel sidebar-panel">
+          <div class="section-title-row">
+            <h2>Match Control</h2>
+            <span class="live-pill">Live</span>
+          </div>
+
+          <div class="status-card active-turn-card">
+            <p class="label">Current turn</p>
+            <div class="current-player-row">
+              <span id="currentPlayerBadge" class="player-badge player-red">Red</span>
+              <span id="turnInstruction" class="turn-instruction">Roll to begin.</span>
+            </div>
+          </div>
+
+          <div class="status-card dice-card">
+            <div class="section-title-row compact">
+              <p class="label">Cinematic dice</p>
+              <p id="diceValueLabel" class="dice-value-label">Waiting...</p>
+            </div>
+            <button id="diceButton" class="dice-button" aria-label="Roll the dice">
+              <span id="diceFace" class="dice-face">?</span>
+            </button>
+            <p class="helper-text">Roll a 6 to deploy a token from base.</p>
+          </div>
+
+          <div class="status-card leaderboard-card">
+            <div class="section-title-row compact">
+              <p class="label">Squad progress</p>
+              <p class="helper-inline">Tap a glowing token to move</p>
+            </div>
+            <div id="playerStats" class="player-stats"></div>
+          </div>
+        </aside>
+
+        <section class="board-panel glass-panel">
+          <div class="board-header">
+            <div>
+              <p class="eyebrow">Advanced visual board</p>
+              <h2>Premium Arena</h2>
+            </div>
+            <div class="board-header-copy">
+              Safe zones glow, active pieces pulse, and finished tokens stack in the center.
+            </div>
+          </div>
+
+          <div class="board-wrapper">
+            <div id="board" class="board" aria-label="Lodu game board"></div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <template id="playerStatTemplate">
+      <article class="player-stat-card">
+        <div class="player-stat-top">
+          <span class="player-badge"></span>
+          <span class="player-progress"></span>
+        </div>
+        <div class="player-meter">
+          <div class="player-meter-fill"></div>
+        </div>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
   </body>
 </html>
